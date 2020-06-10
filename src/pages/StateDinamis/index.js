@@ -6,7 +6,7 @@ const Counter = () => {
   const [nomor, setNomor] = useState(0);
   return (
     <View>
-      <Text>{nomor}</Text>
+      <Text style={styles.angka}>{nomor}</Text>
       <Button title="Tambah" onPress={() => setNomor(nomor + 1)} />
     </View>
   );
@@ -20,7 +20,7 @@ class CounterClass extends Component {
   render() {
     return (
       <View>
-        <Text>{this.state.angka}</Text>
+        <Text style={styles.angka}>{this.state.angka}</Text>
         <Button
           title="Tambah"
           onPress={() => this.setState({angka: this.state.angka + 1})}
@@ -58,5 +58,10 @@ const styles = StyleSheet.create({
   },
   titleSection: {
     marginTop: 20,
+  },
+  angka: {
+    fontSize: 50,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
